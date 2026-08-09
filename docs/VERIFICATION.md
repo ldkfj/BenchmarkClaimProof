@@ -1,6 +1,6 @@
 # BenchmarkClaimProof Verification
 
-Status: `POST_DEPLOY_TEST APPROVED`
+Status: `POST_GITHUB_VERCEL_FINAL PREPARATION`
 
 ## Reviewed revision
 
@@ -25,7 +25,19 @@ Status: `POST_DEPLOY_TEST APPROVED`
 - Constructor arguments: none
 - Replacement contract address: `0xf53ABE770a544C0a26E5e08936C7b5F60b4a0Ec5`
 - Replacement deployment transaction: `0x1768e5bf4addeeee5024765a4b1b2a86b3a26add67168eb29aac8b1f93ef5c6d`
-- Frontend integration: local read and frontend-originated write/reconciliation journeys passed against the replacement Studionet contract; public deployment remains pending.
+- Frontend integration: local read and frontend-originated write/reconciliation journeys passed against the replacement Studionet contract; the production Vercel smoke review also passed.
+
+## Vercel production deployment
+
+- Account: `hongcham819-3406`
+- Team/project: `gam9/benchmark-claim-proof`
+- Production deployment ID: `dpl_7ZobTUaWJk6xTABZN6hNBACBBPg4`
+- Production URL: `https://benchmark-claim-proof.vercel.app`
+- Deployment state: `READY`
+- Source commit deployed: `f790e88c70174c49bc9f5bbb958e6cdd90f47197`
+- Runtime configuration: Vite; root directory `frontend`; install `npm ci`; build `npm run build`; output `dist`
+- Environment binding: `VITE_CONTRACT_ADDRESS` targets `0xf53ABE770a544C0a26E5e08936C7b5F60b4a0Ec5` in Production, Preview, and Development
+- Live smoke review: registry returned five Studionet claims; direct `/claims/1` routing returned `SUPPORTED` assessment `1`; `/register` and `/about` rendered successfully; Connect Wallet opened an explicit provider chooser; browser console contained no warnings or errors
 
 The user explicitly confirmed the frozen classification and its redeployment consequence on 2026-08-09. The replacement source package received fresh exact-package `PRE_DEPLOY` approval before the user-confirmed deployment.
 
@@ -116,14 +128,14 @@ The user explicitly confirmed the frozen classification and its redeployment con
 
 Category: `PROJECT`
 
-Studionet deployment, contract calls, frontend integration, Explorer evidence, and the `POST_DEPLOY_TEST` review are complete. GitHub publication, Vercel deployment, and the final checkpoint remain pending.
+Studionet deployment, contract calls, frontend integration, Explorer evidence, `POST_DEPLOY_TEST` review, GitHub publication, Vercel deployment, and production smoke review are complete. The final checkpoint remains pending.
 
 - GenLayer fit: `4/5` based on a consequential semantic comparison between a frozen commercial claim and an official MLPerf result taxonomy, exact deployment parity, and successful live `SUPPORTED`, `OVERSTATED`, and `UNRESOLVED` consensus outcomes.
 - Contract quality: `4/5` based on fixed evidence boundaries, outcome-preserving consensus, safe unresolved behavior, revision lineage, tests, lint, validation, exact replacement deployment parity, all three successful live write paths, and replay rejection with unchanged state.
 - Engineering: `4/5` based on passing contract/frontend checks, a bounded public source package, and a source commit bound to reproducible hashes.
-- Frontend / UX: `4/5` based on real SDK integration, explicit provider selection, wallet submission, numeric finality normalization, bounded restart-safe reconciliation, exact on-chain readback, responsive behavior, and successful local read/write journeys. Public deployment remains absent.
+- Frontend / UX: `4/5` based on real SDK integration, explicit provider selection, wallet submission, numeric finality normalization, bounded restart-safe reconciliation, exact on-chain readback, responsive behavior, successful local read/write journeys, and a passing production smoke review.
 
-Submission recommendation: `NOT READY` until GitHub, Vercel, and the final review gate pass.
+Submission recommendation: `NOT READY` until the final review gate passes.
 
 ## Known limitations
 
@@ -132,7 +144,7 @@ Submission recommendation: `NOT READY` until GitHub, Vercel, and the final revie
 - Dynamic marketing pages may fail stable capture or exact text containment and must fail safely.
 - The contract assesses whether one frozen claim is supported by one cited result; it does not rerun MLPerf, certify general product quality, or prove universal system superiority.
 - The contract is intentionally frozen. A material defect requires a new reviewed deployment and frontend address replacement.
-- The historical Studionet deployment remains frozen and exhibited repeated assessment disagreement. The corrected replacement deployment has exact source parity, all three write methods exercised successfully, resolved `SUPPORTED` and `OVERSTATED` outcomes, `UNRESOLVED` plus retry, replay rejection with unchanged state, and local frontend read/write journeys. Deterministic tests cover all five verdicts and precedence; public deployment remains pending.
+- The historical Studionet deployment remains frozen and exhibited repeated assessment disagreement. The corrected replacement deployment has exact source parity, all three write methods exercised successfully, resolved `SUPPORTED` and `OVERSTATED` outcomes, `UNRESOLVED` plus retry, replay rejection with unchanged state, and local plus production frontend verification. Deterministic tests cover all five verdicts and precedence.
 - The official repository `main` currently equals the registered commit `4d3916ac9cf474b679cdfcf492d43a0559418ad1`; no strictly newer official commit exists for a resolved-claim reassessment test yet.
 
 ## Historical proof matrix for superseded deployment

@@ -4,7 +4,7 @@ BenchmarkClaimProof is a GenLayer registry that checks whether one frozen public
 
 ## Verified links
 
-- Live app: pending Vercel deployment
+- [Live app](https://benchmark-claim-proof.vercel.app)
 - [Studionet contract](https://explorer-studio.genlayer.com/address/0xf53ABE770a544C0a26E5e08936C7b5F60b4a0Ec5)
 - [Deployment transaction](https://explorer-studio.genlayer.com/tx/0x1768e5bf4addeeee5024765a4b1b2a86b3a26add67168eb29aac8b1f93ef5c6d)
 - Network: GenLayer Studionet, chain ID `61999`
@@ -123,4 +123,3 @@ The decoded deployed source hash matches the repository contract source exactly.
 - One official result row cannot substantiate multi-result rankings or universal superiority claims.
 - BenchmarkClaimProof is independent of MLCommons. It does not rerun benchmarks, certify vendors or products, rank systems, or use the MLPerf logo.
 - The contract is intentionally frozen; material contract fixes require redeployment.
-
