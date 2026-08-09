@@ -97,9 +97,10 @@ The user explicitly confirmed the frozen classification and its redeployment con
 - Result: `10 passed`
 - Revision `0.4` recheck: `10 passed in 0.03s`; the suite deterministically covers all five verdicts and precedence boundaries.
 - `genvm-lint`: `0.11.0`
-- Command: `genvm-lint check contracts/benchmark_claim_proof.py` with UTF-8 console mode
+- Reproducible command (PowerShell): `$env:PYTHONUTF8='1'; $env:GENVM_VERSION='v0.3.0-rc7'; genvm-lint check contracts/benchmark_claim_proof.py`
+- Runner artifact: `genvm-universal-v0.3.0-rc7.tar.xz`, SHA-256 `e218a1854214681560351051f76fe2b878545cf3409455ef372d57014a88ca67`, from the official `genlayerlabs/genvm` v0.3.0-rc7 release
 - Result: lint passed (3 checks); semantic validation passed; contract `BenchmarkClaimProof`; 8 public methods (5 view, 3 write)
-- Informational diagnostic: the pinned `py-genlayer` runner remains accepted by validation, while the linter reports that a newer runner is available. No dependency change is included in this reviewed revision.
+- Informational diagnostic: validation reports a newer runner is available, but the contract remains pinned to the documented `py-genlayer` hash and no dependency change is included.
 
 ### Frontend
 
