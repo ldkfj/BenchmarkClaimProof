@@ -31,10 +31,9 @@ Status: `POST_GITHUB_VERCEL_FINAL PREPARATION`
 
 - Account: `hongcham819-3406`
 - Team/project: `gam9/benchmark-claim-proof`
-- Production deployment ID: `dpl_7ZobTUaWJk6xTABZN6hNBACBBPg4`
 - Production URL: `https://benchmark-claim-proof.vercel.app`
 - Deployment state: `READY`
-- Source commit deployed: `f790e88c70174c49bc9f5bbb958e6cdd90f47197`
+- Git production binding: `ldkfj/BenchmarkClaimProof`, branch `main`; the immutable deployment ID and exact Git SHA are recorded in the final checkpoint package rather than self-referenced inside the tracked revision
 - Runtime configuration: Vite; root directory `frontend`; install `npm ci`; build `npm run build`; output `dist`
 - Environment binding: `VITE_CONTRACT_ADDRESS` targets `0xf53ABE770a544C0a26E5e08936C7b5F60b4a0Ec5` in Production, Preview, and Development
 - Live smoke review: registry returned five Studionet claims; direct `/claims/1` routing returned `SUPPORTED` assessment `1`; `/register` and `/about` rendered successfully; Connect Wallet opened an explicit provider chooser; browser console contained no warnings or errors
